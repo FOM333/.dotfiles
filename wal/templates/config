@@ -21,9 +21,9 @@
 
 # The number of bars (0-200). 0 sets it to auto (fill up console).
 # Bars' width and space between bars in number of characters.
-; bars = 0
-; bar_width = 2
-; bar_spacing = 1
+bars = 0
+bar_width = 1
+bar_spacing = 1
 # bar_height is only used for output in "noritake" format
 ; bar_height = 32
 
@@ -98,7 +98,7 @@
 # 'mono' outputs left to right lowest to highest frequencies.
 # 'mono_option' set mono to either take input from 'left', 'right' or 'average'.
 # set 'reverse' to 1 to display frequencies the other way around.
-; channels = stereo
+channels = mono
 mono_option = average
 ; reverse = 0
 
@@ -180,7 +180,7 @@ gravity = 150
 # Noise reduction, float 0 - 1. default 0.77
 # the raw visualization is very noisy, this factor adjusts the integral and gravity filters to keep the signal smooth
 # 1 will be very slow and smooth, 0 will be fast but noisy.
-noise_reduction = 0.50
+noise_reduction = 0.20
 
 
 [eq]

@@ -52,12 +52,12 @@ bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
 
 # Autolaunch programs to specific workspaces
-#assign [class="firefox"] $ws1
-#assign [class="Strawberry"] $ws2
-#assign [class="pavucontrol"] $ws2
-#assign [class="KeePassXC"] $ws3
+assign [class="firefox"] $ws1
+assign [class="strawberry"] $ws2
+assign [class="Pavucontrol"] $ws2
+assign [class="KeePassXC"] $ws3
 #assign [class="obs"] $ws4
-#assign [class="Steam"] $ws5
+assign [class="Steam"] $ws5
 #assign [class="Alacritty"] $ws10
 
 # Change focus
@@ -153,6 +153,7 @@ gaps top 50
 # Application shortcuts
 bindsym $mod+Return exec alacritty
 bindsym $mod+w exec firefox
+bindsym $mod+v exec pavucontrol
 
 # Keybindings
 bindsym $mod+d exec ~/.config/rofi/launchers/type-3/launcher.sh
@@ -169,15 +170,17 @@ bindsym Ctrl+Shift+minus exec --no-startup-id pactl set-sink-volume @DEFAULT_SIN
 bindsym Ctrl+Shift+m exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym Ctrl+Shift+n exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
+bindsym Ctrl+Shift+p exec --no-startup-id scrot -q 100 ~/Pictures/Screenshots/
+
 # Autostart
 exec_always --no-startup-id picom
 exec_always --no-startup-id sleep 1 && ~/.config/polybar/launch.sh
 exec_always --no-startup-id wal -R
-exec_always --no-startup-id /usr/bin/polkit-gnome
+exec_always --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec_always --no-startup-id /usr/bin/dunst
 exec_always --no-startup-id ~/.screenlayout/2screens.sh
 
-#exec --no-startup-id KeePassXC
+exec --no-startup-id keepassxc
 #exec --no-startup-id strawberry
 #exec --no-startup-id firefox
 
