@@ -165,9 +165,9 @@ bindsym Ctrl+Shift+4 exec --no-startup-id xrandr -s 3840x2160
 bindsym Ctrl+Shift+1 exec --no-startup-id xrandr -s 1920x1080 
 
 set $refresh_i3status killall -SIGUSR1 i3status
-bindsym Ctrl+Shift+plus exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% 
-bindsym Ctrl+Shift+minus exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% 
-bindsym Ctrl+Shift+m exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && 
+bindsym Ctrl+Shift+plus exec --no-startup-id pamixer -i 1
+bindsym Ctrl+Shift+minus exec --no-startup-id pamixer -d 1
+bindsym Ctrl+Shift+m exec --no-startup-id pamixer -t 
 bindsym Ctrl+Shift+n exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
 bindsym Ctrl+Shift+p exec --no-startup-id scrot -q 100 ~/Pictures/Screenshots/
