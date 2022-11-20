@@ -81,6 +81,8 @@ _open_files_for_editing() {
     echo "$FUNCNAME: package 'xdg-utils' or 'exo' is required." >&2
 }
 
+# Starship Prompt
+eval "$(starship init bash)"
 #------------------------------------------------------------
 
 ## Aliases for the functions above.
